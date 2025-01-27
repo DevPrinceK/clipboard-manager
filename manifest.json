@@ -1,11 +1,14 @@
 {
     "manifest_version": 3,
     "name": "Clipboard Manager",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "A simple clipboard manager for storing and reusing clipboard history.",
-    "permissions": ["clipboardRead", "clipboardWrite", "storage"],
+    "permissions": ["clipboardRead", "clipboardWrite", "storage", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
     "action": {
-      "default_popup": "popup.html",
+      "default_popup": "index.html",
       "default_icon": "icon.png"
     }
     
